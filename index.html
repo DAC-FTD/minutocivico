@@ -112,10 +112,10 @@
 
         <!-- Pregunta 1 -->
         <div class="mb-3">
-          <label class="form-label">1. ¿Qué tan satisfecho(a) está con la forma en que se destacó la trayectoria de los empresarios reconocidos?</label>
+            <label class="form-label" id="question-list"><span id="pregunta1"></span></label>
             <div class="form-check">
               <label  class="form-check-label">
-                <input class="form-check-input" type="radio" name="res1" value="Nada satisfecho" required>
+                <input class="form-check-input" id="res-list" type="radio" name="res1" value="Nada satisfecho" required>
                 Nada satisfecho
               </label>
             </div>
@@ -146,7 +146,7 @@
 
         <!-- Pregunta 2 -->
         <div class="mb-3">
-            <label class="form-label">2. ¿Qué tan satisfecho(a) está con los recursos utilizados para presentar a los homenajeados (discursos, audiovisuales, imágenes)?</label>
+            <label class="form-label" id="question-list"><span id="pregunta2"></span></label>
             <div class="form-check">
               <label  class="form-check-label">
                 <input class="form-check-input" type="radio" name="res2" value="Nada satisfecho" required>
@@ -179,7 +179,7 @@
 
       <!-- Pregunta 3 -->
         <div class="mb-3">
-          <label class="form-label">3. ¿Qué tan satisfecho(a) está con la participación directa de los empresarios durante el evento?</label>
+            <label class="form-label" id="question-list"><span id="pregunta3"></span></label>
             <div class="form-check">
               <label  class="form-check-label">
                 <input class="form-check-input" type="radio" name="res3" value="Nada satisfecho" required>
@@ -212,7 +212,7 @@
 
       <!-- Pregunta 4 -->
         <div class="mb-3">
-          <label class="form-label">4. ¿Qué tan satisfecho(a) está con el nivel de inspiración y motivación generado por el reconocimiento entregado?</label>
+            <label class="form-label" id="question-list"><span id="pregunta4"></span></label>
             <div class="form-check">
               <label  class="form-check-label">
                 <input class="form-check-input" type="radio" name="res4" value="Nada satisfecho" required>
@@ -246,7 +246,7 @@
       <!-- Pregunta 5 -->
         <!-- Pregunta 5 (ejemplo) -->
         <div class="mb-3">
-          <label class="form-label">5. ¿Qué aspectos considera que podrían mejorarse en futuras ediciones de este tipo de eventos?</label>
+            <label class="form-label" id="question-list"><span id="pregunta5"></span></label>
             <div class="form-check">
               <label  class="form-check-label">
                 <input class="form-check-input" type="radio" name="res5" value="Mayor variedad en los perfiles de los homenajeados (incluir jóvenes emprendedores, mujeres líderes, innovadores tecnológicos, etc.)" required>
@@ -299,6 +299,32 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+ const urlPreguntas = 'https://script.google.com/macros/s/AKfycbxNNlG5YY3pGxqJ9qMAZdoFKOETNzeYYCUwVgufdRHzXMktR543cYPuku0owelJv49f/exec';
+  
+ document.addEventListener("DOMContentLoaded", function() {
+    mostrarPregunta()
+  });
+
+ const obtenerPreguntas = async ()=>{
+  debugger;
+  const response = await fetch(urlPreguntas)
+  const data = await response.json()
+  return data
+ }
+
+ const mostrarPregunta = async () =>{
+  debugger;
+  let preguntas = await obtenerPreguntas()
+  console.log(preguntas.preguntauno[0]);
+  
+  let preguntaUno = document.getElementById("pregunta1").textContent = preguntas.preguntauno[0].text
+  let preguntaDos = document.getElementById("pregunta2").textContent = preguntas.preguntados[0].text
+  let preguntaTres = document.getElementById("pregunta3").textContent = preguntas.preguntatres[0].text
+  let preguntaCuatro = document.getElementById("pregunta4").textContent = preguntas.preguntacuatro[0].text
+  let preguntaCinco = document.getElementById("pregunta5").textContent = preguntas.preguntacinco[0].text
+
+ }
+
 const preguntas = [1, 2, 3, 4, 5]; // Números de preguntas
 
 preguntas.forEach(num => {
