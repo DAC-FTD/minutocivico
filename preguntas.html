@@ -71,7 +71,7 @@
 <div class="franja-superior d-flex justify-content-between align-items-center px-3">
     <!-- Izquierda -->
     <div class="d-flex align-items-center">
-        <img src="https://dac-ftd.github.io/pry-admin/img/logo-unemi.png" alt="Logo" class="logo-tigre">
+        <img src="img/unemi.png" alt="Logo" class="logo-tigre">
     </div>
 
     <!-- CABECERA DE LA PAGINA -->
@@ -81,7 +81,7 @@
 
     <!-- Derecha -->
     <div class="d-flex align-items-center justify-content-end">
-        <img src="https://dac-ftd.github.io/pry-admin/img/unemi-logo.png" alt="Logo" class="logo-unemi">
+        <img src="img/logo-unemi.png" alt="Logo" class="logo-unemi">
     </div>
 </div>
 <div class="franja-naranja"></div>
@@ -95,19 +95,19 @@
         <p class="mt-3 px-3 mb-0" style="font-size: 14px; text-align:justify ;">Nuestro objetivo es conocer tu opinión sobre la importancia de reconocer a los profesionales que contribuyen al desarrollo de nuestra comunidad y evaluar el impacto de sus historias en inspirar a otros.</p>
       </div>
       <div class="col-md-3">
-        <img src="https://dac-ftd.github.io/pry-admin/img/tigrillo 2.0.png" width="200" height="200" alt="Descripción de la imagen" class="mt-0 mb-2">
+        <img src="img/tigrillo.png" width="200" height="200" alt="Descripción de la imagen" class="mt-0 mb-2">
       </div>
     </div>
   </div>
 
   <div class="card shadow mt-2">
     <div class="card-body">
-      <h2 class="card-title text-center mb-4">Encuesta de Percepción</h2>
+      <h2 class="card-title text-center mb-4">Configurar Encuesta</h2>
 
       <form id="formularioEncuesta">
         <!-- Pregunta 1 -->
         <div class="mb-3">
-          <input id="question-one" type="text" name="questionone" class="form-control border-0" value="1. ¿Qué tan satisfecho(a) está con la forma en que se destacó la trayectoria de los empresarios reconocidos?">
+          <input id="question-one" type="text" name="questionone" class="form-control" value="1. ¿Qué tan satisfecho(a) está con la forma en que se destacó la trayectoria de los empresarios reconocidos?">
           <!--<label class="form-label">1. ¿Qué tan satisfecho(a) está con la forma en que se destacó la trayectoria de los empresarios reconocidos?</label>-->
             <div class="form-check">
               <label  class="form-check-label">
@@ -139,7 +139,7 @@
 
         <!-- Pregunta 2 -->
         <div class="mb-3">
-            <input id="question-two" name="questiontwo" type="text" class="form-control border-0" value="2. ¿Qué tan satisfecho(a) está con los recursos utilizados para presentar a los homenajeados (discursos, audiovisuales, imágenes)?">
+            <input id="question-two" name="questiontwo" type="text" class="form-control" value="2. ¿Qué tan satisfecho(a) está con los recursos utilizados para presentar a los homenajeados (discursos, audiovisuales, imágenes)?">
             <!-- <label class="form-label">2. ¿Qué tan satisfecho(a) está con los recursos utilizados para presentar a los homenajeados (discursos, audiovisuales, imágenes)?</label> -->
             <div class="form-check">
               <label  class="form-check-label">
@@ -165,7 +165,7 @@
 
       <!-- Pregunta 3 -->
         <div class="mb-3">
-          <input id="question-tree" name="questiontree" type="text" class="form-control border-0" value="3. ¿Qué tan satisfecho(a) está con la participación directa de los empresarios durante el evento?">
+          <input id="question-tree" name="questiontree" type="text" class="form-control" value="3. ¿Qué tan satisfecho(a) está con la participación directa de los empresarios durante el evento?">
           <!-- <label class="form-label">3. ¿Qué tan satisfecho(a) está con la participación directa de los empresarios durante el evento?</label> -->
             <div class="form-check">
               <label  class="form-check-label">
@@ -192,7 +192,7 @@
 
       <!-- Pregunta 4 -->
         <div class="mb-3">
-          <input id="question-four" name="questionfour" type="text" class="form-control border-0" value="4. ¿Qué tan satisfecho(a) está con el nivel de inspiración y motivación generado por el reconocimiento entregado?">
+          <input id="question-four" name="questionfour" type="text" class="form-control" value="4. ¿Qué tan satisfecho(a) está con el nivel de inspiración y motivación generado por el reconocimiento entregado?">
           <!-- <label class="form-label">4. ¿Qué tan satisfecho(a) está con el nivel de inspiración y motivación generado por el reconocimiento entregado?</label> -->
             <div class="form-check">
               <label  class="form-check-label">
@@ -220,7 +220,7 @@
       <!-- Pregunta 5 -->
         <!-- Pregunta 5 (ejemplo) -->
         <div class="mb-3">
-          <input id="question-five" name="questionfive" type="text" class="form-control border-0" value="5. ¿Qué aspectos considera que podrían mejorarse en futuras ediciones de este tipo de eventos?">
+          <input id="question-five" name="questionfive" type="text" class="form-control" value="5. ¿Qué aspectos considera que podrían mejorarse en futuras ediciones de este tipo de eventos?">
           <!-- <label class="form-label">5. ¿Qué aspectos considera que podrían mejorarse en futuras ediciones de este tipo de eventos?</label> -->
             <button class="btn btn-primary" type="button" id="btn-add">Agregar Respuesta</button>
             <div class="container-answers" id="container-answers">
@@ -241,7 +241,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content d-flex flex-column justify-content-center align-items-center p-5">
       <div class="spinner-border text-primary mb-3" role="status"></div>
-      <h5 class="modal-title text-center">Enviando respuesta...</h5>
+      <h5 class="modal-title text-center" title="loaderTitle">Registrando preguntas...</h5>
     </div>
   </div>
 </div>

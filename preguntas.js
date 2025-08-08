@@ -1,21 +1,29 @@
 
 
 let btnSave = document.getElementById("btn-save")
+const loaderModal = new bootstrap.Modal(document.getElementById('modalLoader'));
 
 btnSave.addEventListener("click", async function(e){
     e.preventDefault()
-    
+    loaderModal.show() 
     let form = document.getElementById("formularioEncuesta");
     const formData = new FormData(form);
     formData.append("accion", "registrarpregunta"); 
     const data = new URLSearchParams(formData);
-    const response = await fetch("https://script.google.com/macros/s/AKfycbzaqAw4xv2DlqircRl2giG25VX7HdOhtXSKjVcmaeoobHaQKnbl2hbVE16SOVwRWZtA/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbwvLWoinHBnbfGIr9iXx29eGrUsz6DPHHFBGd-IZIesB2GLub-YPKYS5QAH4pi4CPs3/exec", {
         "method": "POST",
         "body": data,
     })
 
     const res = await response.json()
-
+    if(res.status == "success"){
+        Swal.fire({
+            title: "Registrado!!!",
+            icon: "Encuesta registrada con éxito",
+            timer: 3000,
+        });
+        loaderModal.hide()
+    }
     console.log(res);
     return res
 })
