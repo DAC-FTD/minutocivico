@@ -10,7 +10,7 @@ btnSave.addEventListener("click", async function(e){
     const formData = new FormData(form);
     formData.append("accion", "registrarpregunta"); 
     const data = new URLSearchParams(formData);
-    const response = await fetch("https://script.google.com/macros/s/AKfycbwvLWoinHBnbfGIr9iXx29eGrUsz6DPHHFBGd-IZIesB2GLub-YPKYS5QAH4pi4CPs3/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbw8R06eNly1EdF4ynblf-halwOqLlLhMswZ3ViZWyWwYPVC2Ri9Y9U6HG_Kp6ytfmfjZg/exec", {
         "method": "POST",
         "body": data,
     })
