@@ -228,7 +228,7 @@
         const valor = radio.value.toLowerCase();
         console.log(valor);
         
-        const mostrarComentario = valor == 'nada satisfecho' || valor == 'poco satisfecho' || valor.includes('escasa');
+        const mostrarComentario = valor == 'muy en desacuerdo' || valor == 'en desacuerdo' || valor.includes('escasa');
 
         if (mostrarComentario) {
           comentarioDiv.style.display = 'block';
@@ -311,10 +311,6 @@
   }
 
 
-
-
-  
-  
 
   formulario.addEventListener('submit', async function(e) {
     e.preventDefault();
